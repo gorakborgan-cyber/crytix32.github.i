@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b080b">
+  <meta name="description" content="Crytix32 — Minecraft, стримы и игровое сообщество">
+  <title>Crytix32 | Игровой мир</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0b080b;
+      color: white;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 35px 15px;
+      background: linear-gradient(135deg, #350813, #100b10);
+      border-bottom: 2px solid #ff3048;
+    }
+
+    .avatar {
+      width: 190px;
+      max-width: 70%;
+      border: 3px solid #ff3048;
+      border-radius: 22px;
+      box-shadow: 0 0 30px #ff304855;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 8vw, 55px);
+      letter-spacing: 3px;
+    }
+
+    h1 span, h2 span {
+      color: #ff3048;
+    }
+
+    header p {
+      color: #d3c4ca;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 10px;
+    }
+
+    nav a, .social a, button {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      background: #211219;
+      border: 1px solid #a52940;
+      border-radius: 10px;
+      padding: 11px 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 15px;
+    }
+
+    nav a:hover, .social a:hover, button:hover {
+      background: #ff3048;
+      color: #10070a;
+    }
+
+    main {
+      width: min(920px, 92%);
+      margin: 15px auto 35px;
+    }
+
+    section {
+      background: linear-gradient(145deg, #1b1218, #100d11);
+      border: 1px solid #55202b;
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 25px #0005;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .server-ip {
+      overflow-wrap: anywhere;
+      background: #080608;
+      border: 1px dashed #ff3048;
+      color: #ffb5bf;
+      border-radius: 10px;
+      padding: 12px;
+      margin: 12px 0;
+    }
+
+    .schedule {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 15px;
+      border: 1px solid #75404a;
+    }
+
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .social a {
+      flex: 1 1 140px;
+      text-align: center;
+    }
+
+    .muted {
+      color: #c7b9c0;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      color: #c7b9c0;
+      border-top: 1px solid #55202b;
+    }
+
+    @media (max-width: 480px) {
+      section {
+        padding: 18px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .social a {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img
+      class="avatar"
+      src="avatar.jpg"
+      alt="Аниме-аватарка Crytix32"
+    >
+
+    <h1>CRYTI<span>X32</span></h1>
+    <p>🎮 Minecraft • Стримы • Друзья • Игры</p>
+  </header>
+
+  <nav>
+    <a href="#minecraft">🎮 Minecraft</a>
+    <a href="#schedule">📅 Расписание</a>
+    <a href="#socials">🌐 Соцсети</a>
+    <a href="#about">👤 Обо мне</a>
+  </nav>
+
+  <main>
+    <section id="minecraft">
+      <h2><span>01.</span> Мой Minecraft-сервер</h2>
+
+      <p>Заходи играть вместе со мной! ⛏️</p>
+
+      <div class="server-ip" id="serverIP">
+        ТВОЙ_IP_СЕРВЕРА
+      </div>
+
+      <button type="button" onclick="copyIP()">
+        📋 Копировать IP
+      </button>
+
+      <p class="muted">
+        Версия Minecraft: добавь свою версию.
+        Не забудь заменить IP на настоящий адрес сервера.
+      </p>
+    </section>
+
+    <section id="schedule">
+      <h2><span>02.</span> Расписание стримов</h2>
+
+      <p>Увидимся на выходных! 🔴</p>
+
+      <img
+        class="schedule"
+        src="schedule.jpg"
+        alt="Аниме-расписание стримов Crytix32"
+        loading="lazy"
+      >
+
+      <p class="muted">
+        Расписание моих трансляций.
+      </p>
+    </section>
+
+    <section id="socials">
+      <h2><span>03.</span> Мои соцсети</h2>
+
+      <p>
+        Подписывайся на каналы и присоединяйся к нашему сообществу!
+      </p>
+
+      <div class="social">
+        <a
+          href="https://t.me/crytix32tw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ✈️ Telegram
+        </a>
+
+        <a
+          href="https://discord.com/invite/4jHKDfexJ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🎮 Discord
+        </a>
+
+        <a
+          href="https://m.youtube.com/@crytix32"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ▶️ YouTube
+        </a>
+
+        <a
+          href="https://twitch.tv/crytix32"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🔴 Twitch
+        </a>
+      </div>
+
+      <p class="muted">
+        TikTok — ссылка появится позже.
+      </p>
+    </section>
+
+    <section id="about">
+      <h2><span>04.</span> Обо мне</h2>
+
+      <p>
+        Привет! Я Crytix32.
+        Люблю Minecraft, компьютерные игры и стримы.
+        На этом сайте ты найдёшь мой сервер,
+        расписание трансляций и ссылки на мои сообщества.
+        Присоединяйся! ❤️
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Crytix32 | Мой игровой мир ❤️
+  </footer>
+
+  <script>
+    async function copyIP() {
+      const ip = document.getElementById("serverIP")
+        .textContent.trim();
+
+      if (ip === "ТВОЙ_IP_СЕРВЕРА") {
+        alert("Сначала укажи настоящий IP Minecraft-сервера!");
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(ip);
+        alert("IP сервера скопирован!");
+      } catch (error) {
+        prompt("Скопируй IP сервера:", ip);
+      }
+    }
+  </script>
+</body>
+</html>
